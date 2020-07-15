@@ -1,0 +1,71 @@
+/**发布远程仓库*/
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.gradle.publish:plugin-publish-plugin:0.9.10"
+    }
+}
+
+apply plugin: "com.gradle.plugin-publish"
+apply plugin: 'groovy'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy() //not needed for Java plugins
+    // other dependencies that your plugin requires
+    implementation 'com.android.tools.build:gradle:3.4.1'
+}
+version = "0.0.2" // 你发布插件的版本号
+group = "com.wxgz.plugin" // 你发布插件的组名
+pluginBundle {
+    website = 'https://github.com/qinhuagui/wzgzplugin'
+    vcsUrl = 'https://github.com/qinhuagui/wzgzplugin.git'
+    description = 'A plugin to wxgz buried' // 你发布插件的描述
+    tags = ['WXGZ', 'Buried', 'WxgzBuried'] // 你发布插件的标签
+
+    plugins {
+        greetingsPlugin {
+            id = 'com.wxgz.gradle' // 就是刚才定义属性文件时使用的ID
+            displayName = 'WxgzBuriedPlugin'  // 添加依赖时使用的名字
+        }
+    }
+}
+/**以下是本地发布*/
+//apply plugin: 'groovy'
+//apply plugin: 'maven'
+//dependencies {
+//    //gradle sdk
+//    implementation gradleApi()
+//    //groovy sdk
+//    implementation localGroovy()
+//    implementation 'com.android.tools.build:gradle:3.4.1'
+////            {
+////        exclude group:'org.ow2.asm'
+////    }
+//}
+//repositories {
+//    mavenCentral()
+//}
+////group和version在后面使用自定义插件的时候会用到
+//group='com.wxgz.plugin'
+//version='1.0.0'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //提交到远程服务器：
+//            // repository(url: "http://www.xxx.com/repos") {
+//            //    authentication(userName: "admin", password: "admin")
+//            // }
+//            //本地的Maven地址设置为D:/repos
+//            repository(url: uri('../repos'))
+//        }
+//    }
+//}

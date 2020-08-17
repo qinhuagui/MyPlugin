@@ -1,4 +1,4 @@
-package com.wxgz.pluin
+package com.wxgz.gradleburied
 
 import com.android.build.api.transform.*
 import com.android.build.gradle.internal.pipeline.TransformManager

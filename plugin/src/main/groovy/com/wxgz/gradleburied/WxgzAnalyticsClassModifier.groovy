@@ -1,4 +1,4 @@
-package com.wxgz.pluin
+package com.wxgz.gradleburied
 
 import org.apache.commons.codec.digest.DigestUtils
 import org.apache.commons.io.IOUtils

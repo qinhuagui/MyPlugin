@@ -1,4 +1,4 @@
-package com.wxgz.pluin
+package com.wxgz.gradleburied
 
 import jdk.internal.org.objectweb.asm.Opcodes
 

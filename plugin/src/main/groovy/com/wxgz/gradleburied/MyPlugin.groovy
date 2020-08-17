@@ -1,8 +1,6 @@
-package  com.wxgz.plugin
+package  com.wxgz.gradleburied
 
 import com.android.build.gradle.AppExtension
-import com.wxgz.pluin.WxgzAnalyticsExtension
-import com.wxgz.pluin.WxgzAnalyticsTransform
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

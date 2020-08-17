@@ -1,4 +1,4 @@
-package com.wxgz.pluin
+package com.wxgz.gradleburied
 
 import org.objectweb.asm.*
 import org.objectweb.asm.commons.AdviceAdapter
